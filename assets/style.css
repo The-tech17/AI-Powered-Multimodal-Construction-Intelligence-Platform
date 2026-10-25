@@ -1,0 +1,310 @@
+/* Modern Construction Intelligence Platform Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+    --bg-dark: #0b0f19;
+    --bg-card: rgba(26, 34, 52, 0.75);
+    --border-card: rgba(255, 255, 255, 0.08);
+    --accent-amber: #f59e0b;
+    --accent-red: #ef4444;
+    --accent-green: #10b981;
+    --accent-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+}
+
+/* App Header & Brand Banner */
+.brand-header {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 14px;
+    padding: 22px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.brand-header h1 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-badge {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 6px;
+    letter-spacing: 0.8px;
+    display: inline-block;
+}
+
+.brand-sub {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Regulatory Standards Pill Row */
+.standards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.pill-standard {
+    background: rgba(59, 130, 246, 0.1);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* Glassmorphism Metric Cards */
+.metric-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-align: left;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.metric-container:hover {
+    border-color: rgba(245, 158, 11, 0.35);
+    transform: translateY(-2px);
+}
+
+.metric-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.metric-val {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.1;
+}
+
+.metric-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+/* Status Badges */
+.badge-compliant {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    display: inline-block;
+}
+
+.badge-warning {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    display: inline-block;
+}
+
+.badge-critical {
+    background: rgba(239, 68, 68, 0.18);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    display: inline-block;
+}
+
+.badge-info {
+    background: rgba(6, 182, 212, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(6, 182, 212, 0.4);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    display: inline-block;
+}
+
+/* Hazard Card */
+.hazard-card {
+    background: rgba(24, 30, 44, 0.85);
+    border-left: 4px solid var(--accent-red);
+    border-top: 1px solid var(--border-card);
+    border-right: 1px solid var(--border-card);
+    border-bottom: 1px solid var(--border-card);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+}
+
+.hazard-card.severity-high {
+    border-left-color: #f97316;
+}
+
+.hazard-card.severity-medium {
+    border-left-color: #f59e0b;
+}
+
+.hazard-card.severity-low {
+    border-left-color: #3b82f6;
+}
+
+.hazard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.hazard-title {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hazard-citation {
+    font-size: 0.76rem;
+    color: #94a3b8;
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(15, 23, 42, 0.6);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.hazard-remedy {
+    background: rgba(30, 41, 59, 0.6);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 0.87rem;
+    color: #e2e8f0;
+    margin-top: 8px;
+    border-left: 3px solid #10b981;
+}
+
+/* Repair Specification Step Card */
+.repair-step-card {
+    background: rgba(22, 28, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.step-number {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    color: #ffffff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex-grow: 1;
+}
+
+.step-action {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 0.96rem;
+    margin-bottom: 4px;
+}
+
+.step-details {
+    color: #cbd5e1;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+/* Weather Advisory Banner */
+.weather-advisory-box {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 20px;
+}
+
+.protocol-item {
+    background: rgba(15, 23, 42, 0.6);
+    border-left: 3px solid #3b82f6;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 10px;
+    font-size: 0.88rem;
+    color: #f1f5f9;
+}
+
+/* Milestone Progress Step */
+.milestone-track {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 14px;
+}
+
+/* Polished Streamlit Buttons */
+div.stButton > button {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+div.stButton > button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+}
+
+/* Chat Message Styling */
+.stChatMessage {
+    background: rgba(22, 28, 42, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 12px !important;
+    padding: 12px !important;
+    margin-bottom: 12px !important;
+}
